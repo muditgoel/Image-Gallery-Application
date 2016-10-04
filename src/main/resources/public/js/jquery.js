@@ -6671,7 +6671,7 @@ var documentElement = document.documentElement;
 		reliableHiddenOffsetsVal = div.getClientRects().length === 0;
 		if ( reliableHiddenOffsetsVal ) {
 			div.style.display = "";
-			div.innerHTML = "<table><tr><td></td><td>t</td></tr></table>";
+			div.innerHTML = "<table><tr>t</tr></table>";
 			div.childNodes[ 0 ].style.borderCollapse = "separate";
 			contents = div.getElementsByTagName( "td" );
 			contents[ 0 ].style.cssText = "margin:0;border:0;padding:0;display:none";
