@@ -4,3 +4,13 @@ before_install:
 jdk:
   - oraclejdk8
 script: ./gradlew check
+deploy:
+  provider: cloudfoundry
+  api: https://api.run.pivotal.io
+  username: mgoel@andrew.cmu.edu
+  password:
+    secure: WzULsSQoFyF4gR0upG6Ak83eS+FdlIPCbBmCC19zqxrGKWU1DKQuXQaBFidPOSVtsKlBi8bjQLjACs2lwLbpzadq3FMLvZeyIEexJtiqYT+MidT+cSrEOd0ElvDSQhQvg32nXaTw+fTT0sgOY9ORgowWDjC4wgbOQ8YmAcuHh1U=
+  organization: mgoel-cmu
+  space: development
+  on:
+    repo: travis-ci/travis.rb
